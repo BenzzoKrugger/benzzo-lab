@@ -1,0 +1,42 @@
+---
+const { title = "Benzzo", description = "Blog o programování a bastlení" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" />
+
+    <!-- (později) fonty, OG tags, SEO -->
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <a href="/">Benzzo</a>
+        <a href="/blog">Blog</a>
+        <a href="/projects">Projekty</a>
+        <a href="/now">Právě teď</a>
+        <a href="/about">O mě</a>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© {new Date().getFullYear()} Benzzo</p>
+    </footer>
+  </body>
+</html>
