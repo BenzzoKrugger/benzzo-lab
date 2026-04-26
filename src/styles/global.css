@@ -2,22 +2,98 @@
 
 /* === DESIGN TOKENS === */
 :root {
-    --black: #0A0E14;
-    --primary: #AAFFDC;
+    /* === PRIMARY (teal) === */
+    --primary-50:  #E6FFFA;
+    --primary-100: #CCFFF5;
+    --primary-200: #99FFEB;
+    --primary-300: #66FFE0;
+    --primary-400: #33FFD6;
+    --primary-500: #00FFC2; /* base */
+    --primary-600: #00CC9B;
+    --primary-700: #009973;
+    --primary-800: #00664D;
+    --primary-900: #003326;
+
+    /* === SECONDARY (blue) === */
+    --secondary-50:  #E6F7FF;
+    --secondary-100: #CCEFFF;
+    --secondary-200: #99DFFF;
+    --secondary-300: #66CFFF;
+    --secondary-400: #33BFFF;
+    --secondary-500: #00B4FF; /* base */
+    --secondary-600: #0090CC;
+    --secondary-700: #006C99;
+    --secondary-800: #004866;
+    --secondary-900: #002433;
+
+    /* === TERTIARY (cyan) === */
+    --tertiary-50:  #E6FBFF;
+    --tertiary-100: #CCF7FF;
+    --tertiary-200: #99EFFF;
+    --tertiary-300: #66E7FF;
+    --tertiary-400: #33DFFF;
+    --tertiary-500: #00D5FE; /* base */
+    --tertiary-600: #00AACB;
+    --tertiary-700: #007F98;
+    --tertiary-800: #005465;
+    --tertiary-900: #002A32;
+
+    /* === NEUTRALS === */
+    --neutral-50:  #F5F7FA;
+    --neutral-100: #E4E7EB;
+    --neutral-200: #CBD2D9;
+    --neutral-300: #9AA5B1;
+    --neutral-400: #7B8794;
+    --neutral-500: #616E7C; /* surface */
+    --neutral-600: #52606D;
+    --neutral-700: #3E4C59;
+    --neutral-800: #0D1117; 
+    --neutral-900: #0A0E14; /* bg */
 }
+
 
 /* === TAILWIND THEME === */
 @theme {
-    /* colors */
-    --color-bg: var(--black);
-    --color-primary: var(--primary)
+    /* === COLORS === */
+    --color-bg: var(--neutral-900);
+    --color-surface: var(--neutral-500);
 
-    /* typography */
+    --color-primary: var(--primary-500);
+    --color-primary-hover: var(--primary-400);
+    --color-primary-active: var(--primary-600);
+
+    --color-secondary: var(--secondary-500);
+    --color-secondary-hover: var(--secondary-400);
+
+    --color-tertiary: var(--tertiary-500);
+
+    /* === TEXT === */
+    --color-text: #FFFFFF;
+    --color-text-muted: var(--neutral-300);
+    --color-text-subtle: var(--neutral-400);
+
+    /* === BORDER === */
+    --color-border: var(--neutral-700);
+
+    /* === TYPOGRAPHY === */
+    --font-sans: 'Manrope', sans-serif;
+    --font-headline: 'Space Grotesk', sans-serif;
 }
-
 /* === BASE LAYOUT === */
-@layer base{
+@layer base {
     body {
-        @apply bg-bg max-w-7xl mx-auto
+        @apply bg-bg text-text font-sans;
+    }
+
+    h1, h2, h3, h4 {
+        @apply font-headline text-text;
+    }
+
+    p {
+        @apply text-text-muted;
+    }
+
+    a {
+        @apply text-primary hover:text-primary-hover transition-colors;
     }
 }
