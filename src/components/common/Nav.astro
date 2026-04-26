@@ -1,0 +1,25 @@
+---
+// Lucide icons
+import { Menu, X, ChevronDown } from "@lucide/astro"
+---
+
+<nav id="navbar" class="border-b border-white/10">
+  <!-- Navbar Container -->
+  <div
+    class="text-primary flex justify-between px-6 py-4"
+    id="navbar-container"
+  >
+    <!-- Logo -->
+    <a href="/"> <span class="text-xl font-bold uppercase">Benzzo_lab</span></a>
+
+    <!-- Mobile menu button -->
+    <button id="mobile-menu-btn" aria-label="Hlavní menu" class="md:hidden">
+      <Menu class="size-6" />
+      <!-- <a href="/" class="">Benzzo</a>
+    <a href="/blog">Blog</a>
+    <a href="/projects">Projekty</a>
+    <a href="/now">Právě teď</a>
+    <a href="/about">O mě</a> -->
+    </button>
+  </div>
+</nav>

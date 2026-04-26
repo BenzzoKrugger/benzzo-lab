@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+/* === DESIGN TOKENS === */
+:root {
+    --black: #0A0E14;
+    --primary: #AAFFDC;
+}
+
+/* === TAILWIND THEME === */
+@theme {
+    /* colors */
+    --color-bg: var(--black);
+    --color-primary: var(--primary)
+
+    /* typography */
+}
+
+/* === BASE LAYOUT === */
+@layer base{
+    body {
+        @apply bg-bg max-w-7xl mx-auto
+    }
+}

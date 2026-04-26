@@ -1,8 +1,15 @@
 ---
-const { title = "Benzzo", description = "Blog o programování a bastlení" } = Astro.props;
+// Component import
+import Nav from "../components/common/Nav.astro"
+
+// Style import
+import "../styles/global.css"
+
+const { title = "Benzzo", description = "Blog o programování a bastlení" } =
+  Astro.props
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
@@ -18,15 +25,9 @@ const { title = "Benzzo", description = "Blog o programování a bastlení" } = 
   </head>
 
   <body>
-    <!-- Header -->
     <header>
-      <nav>
-        <a href="/">Benzzo</a>
-        <a href="/blog">Blog</a>
-        <a href="/projects">Projekty</a>
-        <a href="/now">Právě teď</a>
-        <a href="/about">O mě</a>
-      </nav>
+      <!-- Navbar -->
+      <Nav />
     </header>
 
     <!-- Main content -->
